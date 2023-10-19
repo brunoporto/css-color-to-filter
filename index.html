@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <title>CSS Color To Filter</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="stylesheet" href="style.css?000" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>CSS HexColorCode to CssFilter</h1>
+      <hr />
+      <div class="row">
+        <div class="column">
+          <div class="Usage__preview">
+            <label>HEX Color Code</label>
+            <input type="text" maxlength="7" id="hexcode" value="#000000" placeholder="#000000" />
+            <label>Max acceptable LOSS</label>
+            <input
+              type="number"
+              step="0.01"
+              min="0"
+              max="5"
+              id="maxloss"
+              value="0.05"
+              placeholder="0.0-5.0"
+            />
+            <button disabled class="button-primary" id="run" onclick="compute()">Run!</button>
+          </div>
+        </div>
+        <div class="column column-67">
+          <section class="container">
+            <div class="row">
+              <div class="column">
+                <label>RGB</label>
+                <code contenteditable id="textRGB">...</code>
+              </div>
+              <div class="column">
+                <label>Orignal Color</label>
+                <div id="pixelHEX" class="pixel"></div>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="column">
+                <label>Loss</label>
+                <code contenteditable id="textLOSS">...</code>
+              </div>
+              <div class="column">
+                <h3 id="lossMessage">...</h3>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class="column">
+                <label class="">FILTER</label>
+                <code id="textFILTER" contenteditable>...</code>
+              </div>
+              <div class="column">
+                <label>Calculated Color</label>
+                <div id="pixelFILTER" class="pixel"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <script src="index.js?0000"></script>
+  </body>
+</html>
